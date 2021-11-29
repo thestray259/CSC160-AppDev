@@ -1,0 +1,35 @@
+﻿<Window x:Class="WPF.DataBinding"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF"
+        mc:Ignorable="d"
+        Title="DataBinding" Height="450" Width="800">
+    <StackPanel Margin="10">
+        <TextBox x:Name="txtValue"></TextBox>
+        <WrapPanel>
+            <TextBlock Text="Value: " FontWeight="Bold" />
+            <TextBlock Text="{Binding Path=Text, ElementName=txtValue}" />
+        </WrapPanel>
+        <WrapPanel Margin="0 10">
+            <TextBlock Text="Title: "/>
+            <TextBox Name="txtTitle" Width="150" Text="{Binding Title, UpdateSourceTrigger=Explicit}"/>
+            <Button x:Name="btnUpdateSource" Content="Update Source" Click="btnUpdateSource_Click" />
+        </WrapPanel>
+        <WrapPanel Margin="0 10">
+            <TextBlock Text="Size: "/>
+            <TextBox Text="{Binding Width}" Width="50" />
+            <TextBox Text=" x "/>
+            <TextBox Text="{Binding Height}" Width="50" />
+        </WrapPanel>
+        <WrapPanel Margin="0 10">
+            <TextBlock Text="Code Behind Binding: " FontWeight="Bold" />
+            <TextBlock Name="txtData"/> 
+        </WrapPanel>
+        <ListBox Name="lbStudents" DisplayMemberPath="strNme" Margin="0 10"></ListBox>
+        <Button Name="btnAdd" Content="Add" Click="btnAdd_Click" />
+        <Button Name="btnRemove" Content="Remove" Click="btnRemove_Click" />
+        <Slider Margin="10" Minimum="200" Maximum="700" Width="150" HorizontalAlignment="Left" Value="{Binding Width}" />
+    </StackPanel>
+</Window>

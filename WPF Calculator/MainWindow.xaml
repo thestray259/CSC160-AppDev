@@ -1,0 +1,54 @@
+﻿<Window x:Class="WPF_Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Calculator"
+        mc:Ignorable="d"
+        Title="Calculator" Height="450" Width="300">
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top">
+            <Label/>
+            <TextBlock x:Name="prevNum" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="24"></TextBlock>
+            <TextBox x:Name="textbox" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="32">0</TextBox>
+            <Label/>
+        </StackPanel>
+            <Border BorderBrush="Black" BorderThickness="3">
+            <Grid ShowGridLines="False">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Button Content="+/-" FontSize="32" Grid.Row="4" Click="Button_ClickSignSwitch"/>
+                <Button Content="0" FontSize="32" Grid.Column="1" Grid.Row="5" Click="Button_Click0"/>
+                <Button Content="." FontSize="32" Grid.Column="2" Grid.Row="4" Click="Button_ClickDecimal"/>
+                <Button Content="=" FontSize="32" Grid.Column="3" Grid.Row="4" Click="Button_ClickEquals"/>
+                <Button Content="1" FontSize="32" Grid.Row="3" Click="Button_Click1"/>
+                <Button Content="2" FontSize="32" Grid.Column="1" Grid.Row="3" Click="Button_Click2"/>
+                <Button Content="3" FontSize="32" Grid.Column="2" Grid.Row="3" Click="Button_Click3"/>
+                <Button Content="+" FontSize="32" Grid.Column="3" Grid.Row="3" Click="Button_ClickPlus"/>
+                <Button Content="4" FontSize="32" Grid.Row="2" Click="Button_Click4"/>
+                <Button Content="5" FontSize="32" Grid.Column="1" Grid.Row="2" Click="Button_Click5"/>
+                <Button Content="6" FontSize="32" Grid.Column="2" Grid.Row="2" Click="Button_Click6"/>
+                <Button Content="-" FontSize="32" Grid.Column="3" Grid.Row="2" Click="Button_ClickMinus"/>
+                <Button Content="7" FontSize="32" Grid.Row="1" Click="Button_Click7"/>
+                <Button Content="8" FontSize="32" Grid.Column="1" Grid.Row="1" Click="Button_Click8"/>
+                <Button Content="9" FontSize="32" Grid.Column="2" Grid.Row="1" Click="Button_Click9"/>
+                <Button Content="*" FontSize="32" Grid.Column="3" Grid.Row="1" Click="Button_ClickMult"/>
+                <Button Content="Square" FontSize="22" Click="Button_ClickSquare"/>
+                <Button Content="CE" FontSize="32" Grid.Column="1" Click="Button_ClickCE"/>
+                <Button Content="C" FontSize="32" Grid.Column="2" Click="Button_ClickC"/>
+                <Button Content="/" FontSize="32" Grid.Column="3" Click="Button_ClickDivide"/>
+            </Grid>
+        </Border>
+    </DockPanel>
+</Window>
