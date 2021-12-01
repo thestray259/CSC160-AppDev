@@ -12,21 +12,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Login
+namespace WPF
 {
     /// <summary>
-    /// Interaction logic for Login.xaml
+    /// Interaction logic for TabControl.xaml
     /// </summary>
-    public partial class Login : Window
+    public partial class TabControl : Window
     {
-        public Login()
+        public TabControl()
         {
             InitializeComponent();
-        }
-
-        private void btnLogin_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

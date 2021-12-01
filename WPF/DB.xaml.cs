@@ -25,7 +25,7 @@ namespace WPF
     /// </summary>
     public partial class DB : Window
     {
-        private NamesTableAdapters.tblNamesTableAdapter adNames = new NamesTableAdapters.tblNamesTableAdapter();
+        private NamesTableAdapters.tblNamesTableAdapter adNames = new NamesTableAdapters.tblNamesTableAdapter(); // Names.xsd
         private Names dsNames = new Names(); 
 
         public DB()
@@ -75,7 +75,17 @@ namespace WPF
             dsNames.tblNames.AddtblNamesRow(row);
             adNames.Update(dsNames);
 
-            MessageBox.Show("Name " + row.Name + " was added", "Added", MessageBoxButton.OK, MessageBoxImage.Information); 
+            MessageBox.Show("Name " + row.Name + " was added", "Added", MessageBoxButton.OK, MessageBoxImage.Information);
+
+            MessageBox.Show(dsNames.tblNames.Rows.Count.ToString()); // shows how many in database 
+
+/*            var s = (from NamesTable in dsNames.tblNames
+                     where NamesTable.ID==3
+                     select NamesTable.Name);*/
+
+            //if (dsNames.tblNames.Rows.Count > 0)
+            //MessageBox.Show(s.First()); 
+
         }
 
         public bool OpenDBCommand(string strDB, ref SqlConnection dbConn, ref SqlCommand sqlcmd)
@@ -114,7 +124,6 @@ namespace WPF
 
             return dt;
         }
-
 
         public long ExecuteIt(string strdb, string strSQL, Hashtable htParameters)
         {

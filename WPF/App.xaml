@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:WPF"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
-             StartupUri="DB.xaml">
+             StartupUri="TabControl.xaml">
     <Application.Resources>
         <sys:String x:Key="AppString">Application Variable!</sys:String>
     </Application.Resources>

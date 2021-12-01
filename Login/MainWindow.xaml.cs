@@ -27,12 +27,16 @@ namespace Login
 
         private void Button_ClickCreateAccount(object sender, RoutedEventArgs e)
         {
-
+            CreateAccount ca = new CreateAccount();
+            ca.Show();
+            this.Close(); 
         }
 
         private void Button_ClickLogin(object sender, RoutedEventArgs e)
         {
-
+            Log login = new Log();
+            login.Show();
+            this.Close(); 
         }
     }
 }
