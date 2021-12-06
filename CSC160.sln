@@ -29,7 +29,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF Calculator", "WPF Calcu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MatchGame", "MatchGame\MatchGame.csproj", "{0116468B-64F6-4CCC-A978-22702F0B6FD2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Login", "Login\Login.csproj", "{DB1B7C93-825C-4718-9CB3-AD2B02FD2080}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Login", "Login\Login.csproj", "{DB1B7C93-825C-4718-9CB3-AD2B02FD2080}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicCharacterBuilder", "BasicCharacterBuilder\BasicCharacterBuilder.csproj", "{D4D2AA19-9705-4A32-BBB9-8D5B75F02D1D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{DB1B7C93-825C-4718-9CB3-AD2B02FD2080}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB1B7C93-825C-4718-9CB3-AD2B02FD2080}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB1B7C93-825C-4718-9CB3-AD2B02FD2080}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4D2AA19-9705-4A32-BBB9-8D5B75F02D1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4D2AA19-9705-4A32-BBB9-8D5B75F02D1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4D2AA19-9705-4A32-BBB9-8D5B75F02D1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4D2AA19-9705-4A32-BBB9-8D5B75F02D1D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

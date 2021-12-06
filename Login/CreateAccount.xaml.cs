@@ -27,7 +27,6 @@ namespace Login
     {
         MainWindow mw = new MainWindow();
 
-        //private DataTableAdapters.tblUserTableAdapter userTable = new DataTableAdapters.tblUserTableAdapter();
         private DataTableAdapters.UsersTableAdapter userTable = new DataTableAdapters.UsersTableAdapter(); 
         private Data data = new Data(); 
 

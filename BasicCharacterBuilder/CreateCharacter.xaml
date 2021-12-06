@@ -1,0 +1,70 @@
+﻿<Window x:Class="BasicCharacterBuilder.CreateCharacter"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BasicCharacterBuilder"
+        mc:Ignorable="d"
+        Title="CreateCharacter" Height="370" Width="480">
+    <Grid Background="LightGray">
+        <TabControl Background="AliceBlue">
+            <TabItem x:Name="Male"> 
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Male" Foreground="DarkBlue" FontSize="24"/>
+                    </StackPanel>
+                </TabItem.Header>
+                <WrapPanel Margin="10">
+                    <TextBlock Text="Name: " FontSize="16" Width="50" Margin="5"/>
+                    <TextBox x:Name="cmName" FontSize="16" Width="350" Margin="5"/>
+                    <TextBlock Text="Age: " FontSize="16" Width="50" Margin="5"/>
+                    <TextBox x:Name="cmAge" FontSize="16" Width="350" Margin="5"/>
+
+                    <ComboBox x:Name="cmRace" FontSize="16" Width="350" Margin="35"/>
+                    <ComboBox x:Name="cmClass" FontSize="16" Width="350" Margin="35 0"/>
+
+                    <Button x:Name="btnRandomizeM" FontSize="16" Width="150" Content="Randomize" Margin="35" Click="btnRandomizeM_Click"/>
+                    <Button x:Name="btnCreateM" FontSize="16" Width="150" Content="Create Character" Margin="15 0 0 0" VerticalAlignment="Center" Click="btnCreateM_Click"/>
+                </WrapPanel>
+            </TabItem>
+            <TabItem x:Name="Female">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Female" Foreground="DarkMagenta" FontSize="24"/>
+                    </StackPanel>
+                </TabItem.Header>
+                <WrapPanel Margin="10">
+                    <TextBlock Text="Name: " FontSize="16" Width="50" Margin="5"/>
+                    <TextBox x:Name="cfName" FontSize="16" Width="350" Margin="5"/>
+                    <TextBlock Text="Age: " FontSize="16" Width="50" Margin="5"/>
+                    <TextBox x:Name="cfAge" FontSize="16" Width="350" Margin="5"/>
+
+                    <ComboBox x:Name="cfRace" FontSize="16" Width="350" Margin="35"/>
+                    <ComboBox x:Name="cfClass" FontSize="16" Width="350" Margin="35 0"/>
+
+                    <Button x:Name="btnRandomizeF" FontSize="16" Width="150" Content="Randomize" Margin="35" Click="btnRandomizeF_Click"/>
+                    <Button x:Name="btnCreateF" FontSize="16" Width="150" Content="Create Character" Margin="15 0 0 0" VerticalAlignment="Center" Click="btnCreateF_Click"/>
+                </WrapPanel>
+            </TabItem>
+            <TabItem x:Name="Other">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Other" Foreground="OrangeRed" FontSize="24"/>
+                    </StackPanel>
+                </TabItem.Header>
+                <WrapPanel Margin="10">
+                    <TextBlock Text="Name: " FontSize="16" Width="50" Margin="5"/>
+                    <TextBox x:Name="coName" FontSize="16" Width="350" Margin="5"/>
+                    <TextBlock Text="Age: " FontSize="16" Width="50" Margin="5"/>
+                    <TextBox x:Name="coAge" FontSize="16" Width="350" Margin="5"/>
+
+                    <ComboBox x:Name="coRace" FontSize="16" Width="350" Margin="35"/>
+                    <ComboBox x:Name="coClass" FontSize="16" Width="350" Margin="35 0"/>
+
+                    <Button x:Name="btnRandomizeO" FontSize="16" Width="150" Content="Randomize" Margin="35" Click="btnRandomizeO_Click"/>
+                    <Button x:Name="btnCreateO" FontSize="16" Width="150" Content="Create Character" Margin="15 0 0 0" VerticalAlignment="Center" Click="btnCreateO_Click"/>
+                </WrapPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

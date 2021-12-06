@@ -1,0 +1,18 @@
+﻿<Window x:Class="BasicCharacterBuilder.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BasicCharacterBuilder"
+        mc:Ignorable="d"
+        Title="Welcome" Height="230" Width="350">
+    <Grid Background="AliceBlue">
+        <StackPanel Margin="10">
+            <TextBlock />
+            <TextBlock Text="Welcome to" HorizontalAlignment="Center" FontSize="24" Foreground="DarkBlue" FontWeight="Bold"/>
+            <TextBlock Text="Basic Character Builder!" HorizontalAlignment="Center" FontSize="24" Foreground="DarkBlue" FontWeight="Bold"/>
+            <Button x:Name="btnCreateCharacter" Content="Create Character" HorizontalAlignment="Center" FontSize="16" Margin="20" Background="Indigo" Foreground="LightCyan" Click="btnCreateCharacter_Click"/>
+            <Button x:Name="btnViewCharacter" Content="View Characters" HorizontalAlignment="Center" FontSize="16" Background="Indigo" Foreground="LightCyan" Click="btnViewCharacter_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
