@@ -30,6 +30,12 @@ namespace BasicCharacterBuilder
         private CharactersTableAdapters.tblCharacterTableAdapter charTable = new CharactersTableAdapters.tblCharacterTableAdapter();
         private Characters chars = new Characters();
 
+        Random random = new Random(); 
+        int randName;
+        int randAge;
+        int randRace;
+        int randClass; 
+
         string name; 
         string age;
         string gender;
@@ -42,14 +48,133 @@ namespace BasicCharacterBuilder
         int wis = 0;
         int cha = 0; 
 
-        string[] names = new string[] { "Finnley", "Morgan", "Jessie", "Skylar", "Frankie", "Quinn", "Adrian", "Parker", "Arrow", 
-                                          "Arden", "Valen", "Ziv", "Xen", "Vesper", "Sparrow", "Roux", "Reef", "Owen", "Orion", 
-                                          "Sloan", "River", "Haven", "Ellis", "Ari", "Oakley", "Arlo", "Aspen", "Grey", "Delta", 
-                                          "Celyn", "Yoltzin", "Ray" };
+        string[] names = new string[] { "Finnley", "Morgan", "Jessie", "Skylar", "Frankie", "Quinn", "Adrian", "Parker", "Arrow", //9
+                                          "Arden", "Valen", "Ziv", "Xen", "Vesper", "Sparrow", "Roux", "Reef", "Owen", "Orion", //10
+                                          "Sloan", "River", "Haven", "Ellis", "Ari", "Oakley", "Arlo", "Aspen", "Grey", "Delta", //10
+                                          "Celyn", "Yoltzin", "Ray" }; //3
 
         public CreateCharacter()
         {
             InitializeComponent();
+        }
+
+        void RandomCharacter()
+        {
+            // get random number between 0 and 31 for name 
+            // that sets the name
+            randName = random.Next(0, 31);
+            name = names[randName];
+
+            // get random number between 1 and 1000 
+            // that sets the age 
+            randAge = random.Next(1, 1000);
+            age = randAge.ToString();
+
+            // get random number between 1 and 7 for race 
+            // that sets the race 
+            randRace = random.Next(1, 7);
+            if (randRace == 1) race = "Human";
+            else if (randRace == 2)
+            {
+                race = "Dragonborn";
+                str += 2;
+                cha++;
+            }
+            else if (randRace == 3)
+            {
+                race = "Dwarf";
+                con++;
+            }
+            else if (randRace == 4)
+            {
+                race = "Elf";
+                dex += 2;
+            }
+            else if (randRace == 5)
+            {
+                race = "Gnome";
+                inte++;
+            }
+            else if (randRace == 6)
+            {
+                race = "Halfling";
+                dex += 2;
+            }
+            else if (randRace == 7)
+            {
+                race = "Tiefling";
+                inte++;
+                cha += 2;
+            }
+            else Console.WriteLine("Race not computed correctly");
+
+            // get random number between 1 and 13 for class 
+            // that sets the class 
+            randClass = random.Next(1, 13);
+            if (randClass == 1) charClass = "Human";
+            else if (randClass == 2)
+            {
+                charClass = "Barbarian";
+                str++;
+            }
+            if (randClass == 3)
+            {
+                charClass = "Bard";
+                cha++;
+            }
+            if (randClass == 4)
+            {
+                charClass = "Cleric";
+                wis++;
+            }
+            if (randClass == 5)
+            {
+                charClass = "Druid";
+                wis++;
+            }
+            if (randClass == 6)
+            {
+                charClass = "Fighter";
+                str++;
+                dex++;
+            }
+            if (randClass == 7)
+            {
+                charClass = "Monk";
+                dex++;
+            }
+            if (randClass == 8)
+            {
+                charClass = "Paladin";
+                str++;
+            }
+            if (randClass == 9)
+            {
+                charClass = "Ranger";
+                dex++;
+            }
+            if (randClass == 10)
+            {
+                charClass = "Rouge";
+                dex++;
+            }
+            if (randClass == 11)
+            {
+                charClass = "Sorcerer";
+                cha++;
+            }
+            if (randClass == 12)
+            {
+                charClass = "Warlock";
+                cha++;
+            }
+            if (randClass == 13)
+            {
+                charClass = "Wizard";
+                inte++;
+            }
+
+            SetInfo();
         }
 
         void SetInfo()
@@ -71,13 +196,16 @@ namespace BasicCharacterBuilder
             chars.tblCharacter.AddtblCharacterRow(row);
             charTable.Update(chars);
 
-            MessageBox.Show("Character successfully created!"); 
+            MessageBox.Show("Character successfully created!");
+            mw.Show();
+            this.Close();
         }
 
         // Male
         private void btnRandomizeM_Click(object sender, RoutedEventArgs e)
         {
-
+            gender = "Male";
+            RandomCharacter();
         }
 
         private void btnCreateM_Click(object sender, RoutedEventArgs e)
@@ -97,7 +225,7 @@ namespace BasicCharacterBuilder
                 if (charClass == "") charClass = "Classless"; 
 
                 // enter information into database 
-                SetInfo(); 
+                SetInfo();
             }
 
         }
@@ -208,7 +336,8 @@ namespace BasicCharacterBuilder
         // Female
         private void btnRandomizeF_Click(object sender, RoutedEventArgs e)
         {
-
+            gender = "Female";
+            RandomCharacter();
         }
 
         private void btnCreateF_Click(object sender, RoutedEventArgs e)
@@ -229,7 +358,8 @@ namespace BasicCharacterBuilder
         // Other
         private void btnRandomizeO_Click(object sender, RoutedEventArgs e)
         {
-
+            gender = "Other";
+            RandomCharacter();
         }
 
         private void btnCreateO_Click(object sender, RoutedEventArgs e)
