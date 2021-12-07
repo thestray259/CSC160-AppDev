@@ -20,8 +20,30 @@
                     <TextBlock Text="Age: " FontSize="16" Width="50" Margin="5"/>
                     <TextBox x:Name="cmAge" FontSize="16" Width="350" Margin="5"/>
 
-                    <ComboBox x:Name="cmRace" FontSize="16" Width="350" Margin="35"/>
-                    <ComboBox x:Name="cmClass" FontSize="16" Width="350" Margin="35 0"/>
+                    <ComboBox x:Name="cmRace" FontSize="16" Width="350" Margin="35" SelectionChanged="cmRace_SelectionChanged">
+                        <ComboBoxItem x:Name="mHuman" Content="Human"/>
+                        <ComboBoxItem x:Name="mDragonborn" Content="Dragonborn"/>
+                        <ComboBoxItem x:Name="mDwarf" Content="Dwarf"/>
+                        <ComboBoxItem x:Name="mElf" Content="Elf"/>
+                        <ComboBoxItem x:Name="mGnome" Content="Gnome"/>
+                        <ComboBoxItem x:Name="mHalfling" Content="Halfling"/>
+                        <ComboBoxItem x:Name="mTiefling" Content="Tiefling"/>
+                    </ComboBox>
+                    <ComboBox x:Name="cmClass" FontSize="16" Width="350" Margin="35 0" SelectionChanged="cmClass_SelectionChanged">
+                        <ComboBoxItem x:Name="mClassless" Content="Classless"/>
+                        <ComboBoxItem x:Name="mBarbarian" Content="Barbarian"/>
+                        <ComboBoxItem x:Name="mBard" Content="Bard"/>
+                        <ComboBoxItem x:Name="mCleric" Content="Cleric"/>
+                        <ComboBoxItem x:Name="mDruid" Content="Druid"/>
+                        <ComboBoxItem x:Name="mFighter" Content="Fighter"/>
+                        <ComboBoxItem x:Name="mMonk" Content="Monk"/>
+                        <ComboBoxItem x:Name="mPaladin" Content="Paladin"/>
+                        <ComboBoxItem x:Name="mRanger" Content="Ranger"/>
+                        <ComboBoxItem x:Name="mRouge" Content="Rouge"/>
+                        <ComboBoxItem x:Name="mSorcerer" Content="Sorcerer"/>
+                        <ComboBoxItem x:Name="mWarlock" Content="Warlock"/>
+                        <ComboBoxItem x:Name="mWizard" Content="Wizard"/>
+                    </ComboBox>
 
                     <Button x:Name="btnRandomizeM" FontSize="16" Width="150" Content="Randomize" Margin="35" Click="btnRandomizeM_Click"/>
                     <Button x:Name="btnCreateM" FontSize="16" Width="150" Content="Create Character" Margin="15 0 0 0" VerticalAlignment="Center" Click="btnCreateM_Click"/>
@@ -39,8 +61,30 @@
                     <TextBlock Text="Age: " FontSize="16" Width="50" Margin="5"/>
                     <TextBox x:Name="cfAge" FontSize="16" Width="350" Margin="5"/>
 
-                    <ComboBox x:Name="cfRace" FontSize="16" Width="350" Margin="35"/>
-                    <ComboBox x:Name="cfClass" FontSize="16" Width="350" Margin="35 0"/>
+                    <ComboBox x:Name="cfRace" FontSize="16" Width="350" Margin="35" SelectionChanged="cfRace_SelectionChanged">
+                        <ComboBoxItem x:Name="fHuman" Content="Human"/>
+                        <ComboBoxItem x:Name="fDragonborn" Content="Dragonborn"/>
+                        <ComboBoxItem x:Name="fDwarf" Content="Dwarf"/>
+                        <ComboBoxItem x:Name="fElf" Content="Elf"/>
+                        <ComboBoxItem x:Name="fGnome" Content="Gnome"/>
+                        <ComboBoxItem x:Name="fHalfling" Content="Halfling"/>
+                        <ComboBoxItem x:Name="fTiefling" Content="Tiefling"/>
+                    </ComboBox>
+                    <ComboBox x:Name="cfClass" FontSize="16" Width="350" Margin="35 0" SelectionChanged="cfClass_SelectionChanged">
+                        <ComboBoxItem x:Name="fClassless" Content="Classless"/>
+                        <ComboBoxItem x:Name="fBarbarian" Content="Barbarian"/>
+                        <ComboBoxItem x:Name="fBard" Content="Bard"/>
+                        <ComboBoxItem x:Name="fCleric" Content="Cleric"/>
+                        <ComboBoxItem x:Name="fDruid" Content="Druid"/>
+                        <ComboBoxItem x:Name="fFighter" Content="Fighter"/>
+                        <ComboBoxItem x:Name="fMonk" Content="Monk"/>
+                        <ComboBoxItem x:Name="fPaladin" Content="Paladin"/>
+                        <ComboBoxItem x:Name="fRanger" Content="Ranger"/>
+                        <ComboBoxItem x:Name="fRouge" Content="Rouge"/>
+                        <ComboBoxItem x:Name="fSorcerer" Content="Sorcerer"/>
+                        <ComboBoxItem x:Name="fWarlock" Content="Warlock"/>
+                        <ComboBoxItem x:Name="fWizard" Content="Wizard"/>
+                    </ComboBox>
 
                     <Button x:Name="btnRandomizeF" FontSize="16" Width="150" Content="Randomize" Margin="35" Click="btnRandomizeF_Click"/>
                     <Button x:Name="btnCreateF" FontSize="16" Width="150" Content="Create Character" Margin="15 0 0 0" VerticalAlignment="Center" Click="btnCreateF_Click"/>
@@ -58,8 +102,30 @@
                     <TextBlock Text="Age: " FontSize="16" Width="50" Margin="5"/>
                     <TextBox x:Name="coAge" FontSize="16" Width="350" Margin="5"/>
 
-                    <ComboBox x:Name="coRace" FontSize="16" Width="350" Margin="35"/>
-                    <ComboBox x:Name="coClass" FontSize="16" Width="350" Margin="35 0"/>
+                    <ComboBox x:Name="coRace" FontSize="16" Width="350" Margin="35" SelectionChanged="coRace_SelectionChanged">
+                        <ComboBoxItem x:Name="oHuman" Content="Human"/>
+                        <ComboBoxItem x:Name="oDragonborn" Content="Dragonborn"/>
+                        <ComboBoxItem x:Name="oDwarf" Content="Dwarf"/>
+                        <ComboBoxItem x:Name="oElf" Content="Elf"/>
+                        <ComboBoxItem x:Name="oGnome" Content="Gnome"/>
+                        <ComboBoxItem x:Name="oHalfling" Content="Halfling"/>
+                        <ComboBoxItem x:Name="oTiefling" Content="Tiefling"/>
+                    </ComboBox>
+                    <ComboBox x:Name="coClass" FontSize="16" Width="350" Margin="35 0" SelectionChanged="coClass_SelectionChanged">
+                        <ComboBoxItem x:Name="oClassless" Content="Classless"/>
+                        <ComboBoxItem x:Name="oBarbarian" Content="Barbarian"/>
+                        <ComboBoxItem x:Name="oBard" Content="Bard"/>
+                        <ComboBoxItem x:Name="oCleric" Content="Cleric"/>
+                        <ComboBoxItem x:Name="oDruid" Content="Druid"/>
+                        <ComboBoxItem x:Name="oFighter" Content="Fighter"/>
+                        <ComboBoxItem x:Name="oMonk" Content="Monk"/>
+                        <ComboBoxItem x:Name="oPaladin" Content="Paladin"/>
+                        <ComboBoxItem x:Name="oRanger" Content="Ranger"/>
+                        <ComboBoxItem x:Name="oRouge" Content="Rouge"/>
+                        <ComboBoxItem x:Name="oSorcerer" Content="Sorcerer"/>
+                        <ComboBoxItem x:Name="oWarlock" Content="Warlock"/>
+                        <ComboBoxItem x:Name="oWizard" Content="Wizard"/>
+                    </ComboBox>
 
                     <Button x:Name="btnRandomizeO" FontSize="16" Width="150" Content="Randomize" Margin="35" Click="btnRandomizeO_Click"/>
                     <Button x:Name="btnCreateO" FontSize="16" Width="150" Content="Create Character" Margin="15 0 0 0" VerticalAlignment="Center" Click="btnCreateO_Click"/>
