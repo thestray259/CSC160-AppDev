@@ -217,6 +217,7 @@ namespace BasicCharacterBuilder
             {
                 // set properties specific to male 
                 name = cmName.Text.ToString();
+                //name = name.ToUpper();
                 if (cmAge.Text == "") age = "Unknown";
                 else age = cmAge.Text.ToString();
                 gender = "Male";
@@ -349,6 +350,7 @@ namespace BasicCharacterBuilder
             {
                 // set properties specific to male 
                 name = cfName.Text.ToString();
+                //name = name.ToUpper();
                 if (cfAge.Text == "") age = "Unknown";
                 else age = cfAge.Text.ToString();
                 gender = "Female";
@@ -468,6 +470,7 @@ namespace BasicCharacterBuilder
         private void btnRandomizeO_Click(object sender, RoutedEventArgs e)
         {
             gender = "Other";
+            //name = name.ToUpper();
             RandomCharacter();
         }
 

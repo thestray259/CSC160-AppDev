@@ -39,9 +39,9 @@ namespace WPF
             Hashtable ht = new Hashtable();
             string sql;
 
-            /*ht.Add("@Name", "Louis");
-            ht.Add("@Age", 41);
-            ht.Add("@ID", 8); 
+            //ht.Add("@Name", "Louis");
+            //ht.Add("@Age", 41);
+            //ht.Add("@ID", 8); 
             //sql = "Insert into tblNames (Name, Age) Values (@Name, @Age)";
             //sql = "Update tblNames set Name=@Name, Age=@Age where ID=7"; 
             //sql = "Delete from tblNames where ID=@ID"; 
@@ -53,31 +53,31 @@ namespace WPF
             dg.ItemsSource = dt.DefaultView;
             dg.AutoGenerateColumns = true;
 
-            DataRow dr;
-            dr = dt.Rows[0];
+            //DataRow dr;
+            //dr = dt.Rows[0];
             //int intID;
             //intID = (int)dr["ID"];
-            string s;
-            s = (string)dr["Name"]; 
+            //string s;
+            //s = (string)dr["Name"]; 
             //MessageBox.Show(intID.ToString()); 
-            MessageBox.Show(s);*/
+            //MessageBox.Show(s);
 
             // how to open a new window 
             /*            Panels window = new Panels();
                         window.Show();
                         this.Close(); */
 
-            Names.tblNamesRow row = (Names.tblNamesRow)dsNames.tblNames.NewRow();
-
-            row.Name = "Randall";
-            row.Age = 75;
-
-            dsNames.tblNames.AddtblNamesRow(row);
-            adNames.Update(dsNames);
-
-            MessageBox.Show("Name " + row.Name + " was added", "Added", MessageBoxButton.OK, MessageBoxImage.Information);
-
-            MessageBox.Show(dsNames.tblNames.Rows.Count.ToString()); // shows how many in database 
+            //Names.tblNamesRow row = (Names.tblNamesRow)dsNames.tblNames.NewRow();
+            //
+            //row.Name = "Randall";
+            //row.Age = 75;
+            //
+            //dsNames.tblNames.AddtblNamesRow(row);
+            //adNames.Update(dsNames);
+            //
+            //MessageBox.Show("Name " + row.Name + " was added", "Added", MessageBoxButton.OK, MessageBoxImage.Information);
+            //
+            //MessageBox.Show(dsNames.tblNames.Rows.Count.ToString()); // shows how many in database 
 
 /*            var s = (from NamesTable in dsNames.tblNames
                      where NamesTable.ID==3

@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BasicCharacterBuilder"
         mc:Ignorable="d"
-        Title="ViewCharacter" Height="450" Width="800">
-    <Grid>
-        
+        Title="ViewCharacter" Height="350" Width="370">
+    <Grid Background="AliceBlue">
+        <WrapPanel Margin="10">
+            <Button x:Name="btnMale" Content=" Male " HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10" FontSize="16" Background="LightSteelBlue" Click="btnMale_Click"/>
+            <Button x:Name="btnFemale" Content=" Female " HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 10" FontSize="16" Background="LightPink" Click="btnFemale_Click"/>
+            <Button x:Name="btnOther" Content=" Other " HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10" FontSize="16" Background="LightGoldenrodYellow" Click="btnOther_Click"/>
+            <Button x:Name="btnAll" Content=" All " HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 10" FontSize="16" Background="LightGreen" Click="btnAll_Click"/>
+
+            <Button x:Name="btnGoBack" Content=" Go Back " VerticalAlignment="Center" Margin="10" FontSize="16" Background="LightSlateGray" Click="btnGoBack_Click"/>
+            <DataGrid x:Name="dg" Margin="10"/>
+        </WrapPanel>
     </Grid>
 </Window>
